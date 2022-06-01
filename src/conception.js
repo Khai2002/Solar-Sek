@@ -12,7 +12,7 @@ dat.GUI.toggleHide()
 // Scene
 const scene = new THREE.Scene();
 
-scene.background = new THREE.Color(0x000000)
+scene.background = new THREE.Color("#bfbfbf")
 
 // Camera
 const camera = new THREE.PerspectiveCamera (30,
@@ -40,7 +40,7 @@ new OrbitControls(camera,renderer.domElement)
 // Model
 let obj
 const gltfLoader = new GLTFLoader()
-gltfLoader.load('./res/project/SolarSekModel.gltf', (gltfScene) => {
+gltfLoader.load('./res/last/SolarSek.gltf', (gltfScene) => {
     obj = gltfScene.scene
     scene.add(gltfScene.scene)
     console.log(gltfScene.scene)
@@ -56,10 +56,11 @@ scene.add(skyLight)
 //Animation
 
 
+
 function animate(){
     if(obj != null){
         console.log(obj.rotation.y)
-        obj.rotation.z += 0.01
+        //obj.rotation.z += 0.01
     }
     requestAnimationFrame(animate)
     renderer.render(scene,camera)

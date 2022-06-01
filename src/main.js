@@ -26,7 +26,7 @@ gui.add(world.plane,'heightSegments',1,200).onChange(() => {generatePlane(world.
 gui.add(world.plane, 'depthIntensity',0, 5, 0.05).onChange(() => {generatePlane(world.plane.depthIntensity)})
 
 // Toggle Dat Gui
-dat.GUI.toggleHide();
+//dat.GUI.toggleHide();
 
 // Ray Caster
 const rayCaster = new THREE.Raycaster();
